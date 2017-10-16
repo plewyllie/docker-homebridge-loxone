@@ -7,7 +7,7 @@ if [ "$HOMEBRIDGE_USERNAME" ]; then
 fi
 
 if [ "$HOMEBRIDGE_PIN" ]; then
-  jq --arg USERNAME $HOMEBRIDGE_PIN '.bridge.username=$PIN' config.json > config.json.tmp && mv config.json.tmp config.json
+  jq --arg PIN $HOMEBRIDGE_PIN '.bridge.pin=$PIN' config.json > config.json.tmp && mv config.json.tmp config.json
 fi
 
 if [ "$LOXONE_IP_ADDRESS" ]; then
@@ -39,5 +39,5 @@ avahi-daemon -D
 
 
 # Start Homebridge
-homebridge
+exec homebridge
 
