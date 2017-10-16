@@ -3,11 +3,11 @@
 cd /root/.homebridge
 
 if [ "$HOMEBRIDGE_USERNAME" ]; then
-  jq --arg USERNAME $HOMEBRIDGE_USERNAME '.bridge.username=$USERNAME' config.json
+  jq --arg USERNAME $HOMEBRIDGE_USERNAME '.bridge.username=$USERNAME' config.json > config.json.tmp && mv config.json.tmp config.json
 fi
 
 if [ "$HOMEBRIDGE_PIN" ]; then
-  jq --arg USERNAME $HOMEBRIDGE_PIN '.bridge.username=$PIN' config.json
+  jq --arg USERNAME $HOMEBRIDGE_PIN '.bridge.username=$PIN' config.json > config.json.tmp && mv config.json.tmp config.json
 fi
 
 if [ "$LOXONE_IP_ADDRESS" ]; then
