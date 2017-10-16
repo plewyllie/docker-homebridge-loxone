@@ -21,8 +21,8 @@ The following environment variables are also honored for configuring your ScaleI
 sudo docker volume create homebridge_vol
 ```
 
-```sudo docker run --restart=always --net=host -d --name homebridge -p 5353:5353 -p 51826:51826 -e LOXONE_IP_ADDRESS=192.168.1.200 -e LOXONE_USERNAME="admin" -e LOXONE_PASSWORD='password' -e HOMEBRIDGE_USERNAME="CA:AA:12:34:56:78" -e HOMEBRIDGE_PIN="012-34-567" -v homebridge_vol:/root/.homebridge/perist vchrisb/homebridge-loxone```
+```sudo docker run --restart=always --net=host -d --name homebridge -p 5353:5353 -p 51826:51826 -e LOXONE_IP_ADDRESS=192.168.1.200 -e LOXONE_USERNAME="admin" -e LOXONE_PASSWORD='password' -e HOMEBRIDGE_USERNAME="CA:AA:12:34:56:78" -e HOMEBRIDGE_PIN="012-34-567" -v homebridge_vol:/root/.homebridge/persist vchrisb/homebridge-loxone```
 
 ### use local folder for persistence
 
-```sudo docker run --restart=always --net=host -d --name homebridge -p 5353:5353 -p 51826:51826 -e LOXONE_IP_ADDRESS=192.168.1.200 -e LOXONE_USERNAME="admin" -e LOXONE_PASSWORD='password' -e HOMEBRIDGE_USERNAME="CA:AA:12:34:56:78" -e HOMEBRIDGE_PIN="012-34-567" -v /home/user/homebridge_persist:/root/.homebridge/perist vchrisb/homebridge-loxone```
+```sudo docker run --restart=always --net=host -d --name homebridge -p 5353:5353 -p 51826:51826 -e LOXONE_IP_ADDRESS=192.168.1.200 -e LOXONE_USERNAME="admin" -e LOXONE_PASSWORD='password' -e HOMEBRIDGE_USERNAME="CA:AA:12:34:56:78" -e HOMEBRIDGE_PIN="012-34-567" -v /home/user/homebridge_persist:/root/.homebridge/persist vchrisb/homebridge-loxone```
