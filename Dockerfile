@@ -1,5 +1,5 @@
 
-FROM node:latest
+FROM node:11.10-stretch
 
 MAINTAINER Chris Banck
 
