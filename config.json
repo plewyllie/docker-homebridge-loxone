@@ -15,5 +15,12 @@
       "username": "admin",
       "password": "password"
     }
-  ]
+  ],
+  "accessories": [
+        {
+            "accessory": "AutomationRandomChoice",
+            "name": "PresenceSimulator",
+            "sensors": 3
+        }
+    ]
 }
