@@ -39,5 +39,5 @@ avahi-daemon -D
 
 
 # Start Homebridge
-exec homebridge
+exec homebridge -I
 

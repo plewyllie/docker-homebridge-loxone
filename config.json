@@ -14,7 +14,13 @@
       "port": "80",
       "username": "admin",
       "password": "password"
-    }
+    },
+	{
+	  "platform": "config",
+	  "name": "Config",
+	  "port": 8085,
+	  "sudo": true 
+	}
   ],
   "accessories": [
         {

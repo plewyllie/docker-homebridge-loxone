@@ -20,6 +20,10 @@ RUN npm install -g homebridge-loxone-ws
 
 RUN npm install -g homebridge-automation-random-choice
 
+RUN npm install -g --unsafe-perm homebridge-config-ui-x
+
+RUN npm install -g homebridge-gsh
+
 COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 
 USER root
